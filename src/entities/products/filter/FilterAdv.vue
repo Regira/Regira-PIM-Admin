@@ -384,12 +384,20 @@ watchEffect(async () => {
     }
 })
 watchEffect(async () => {
-    if (searchObject.value.allFacetId != null && allFacets.value == null) {
+    const hasFacetId =
+        searchObject.value.allFacetId != null &&
+        (!Array.isArray(searchObject.value.allFacetId) || (searchObject.value.allFacetId as Array<number>)?.length)
+
+    if (hasFacetId && allFacets.value == null) {
         allFacets.value = await facetService.list({ ids: searchObject.value.allFacetId as number[] })
     }
 })
 watchEffect(async () => {
-    if (searchObject.value.excludeFacetId != null && excludeFacets.value == null) {
+    const hasExcludeFacetId =
+        searchObject.value.excludeFacetId != null &&
+        (!Array.isArray(searchObject.value.excludeFacetId) || (searchObject.value.excludeFacetId as Array<number>)?.length)
+    if (hasExcludeFacetId && excludeFacets.value == null) {
+        console.debug("Loading excluded facets", searchObject.value.excludeFacetId)
         excludeFacets.value = await facetService.list({ ids: searchObject.value.excludeFacetId as number[] })
     }
 })

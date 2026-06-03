@@ -154,7 +154,9 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
                     app.config.globalProperties.$setCulture(auth.culture!)
                     app.config.globalProperties.$setAppStatus(AppStatus.Ready)
 
-                    setLangCode(auth.culture!.split("-")[0]!)
+                    const lang = (Array.isArray(auth.culture) ? (auth.culture![0] as string) : (auth.culture as string)).split("-")[0]
+                    setLangCode(lang || "en")
+                    
                     document.title = translateMessage(processedConfig.title)
 
                     console.debug("ready", {

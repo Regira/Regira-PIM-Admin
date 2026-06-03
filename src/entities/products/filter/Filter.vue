@@ -15,8 +15,6 @@
             >
                 <slot name="title"></slot>
                 <slot name="adv" :handleUpdate="handleUpdate" :handleSubmit="handleSubmit" :handleClose="handleClose"> </slot>
-
-                <Debug :modelValue="searchObject" />
             </MyModal>
         </Teleport>
     </div>
