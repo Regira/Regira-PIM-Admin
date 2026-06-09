@@ -53,7 +53,12 @@
             </div>
             <!-- UnitType -->
             <div class="col mb-2">
-                <UnitTypeInputSelector v-model="unitType" v-model:id-value="searchObject.unitTypeId" :placeholder="$t('unitType')" />
+                <UnitTypeInputSelector
+                    v-model="unitType"
+                    v-model:id-value="searchObject.unitTypeId"
+                    :placeholder="$t('unitType')"
+                    @select="handleFilter"
+                />
                 <FormLabel :label="$t('unitType')" />
             </div>
         </div>
@@ -66,6 +71,7 @@
                     :canEdit="false"
                     :filterDefaults="{ isComponent: true }"
                     :placeholder="$t('product.component')"
+                    @select="handleFilter"
                 >
                     <template #prepend>
                         <span class="input-group-text">
@@ -83,6 +89,7 @@
                     :canEdit="false"
                     :filterDefaults="{ isAssembly: true }"
                     :placeholder="$t('product.assembly')"
+                    @select="handleFilter"
                 >
                     <template #prepend>
                         <span class="input-group-text">

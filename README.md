@@ -1,5 +1,13 @@
 # PIM-Manager
 
+## Important: Regira-JsLib Symlink
+
+This project uses [Regira-JsLib](https://github.com/Regira/Regira-JsLib) through a local symlink at `src/regira_modules`.
+
+The `regira_modules` folder is not a regular copied dependency in this repository; it links to your local Regira-JsLib checkout.
+
+Make sure this symlink exists and points to a valid Regira-JsLib path before running or building the app.
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
