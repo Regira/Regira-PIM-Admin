@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFilter, type FilterEmits } from "@/regira_modules/vue/entities"
+import { useFilter, type FilterEmits } from "regira_modules/vue/entities"
 import SearchObject from "./SearchObject"
 
 interface Emits extends /* @vue-ignore */ FilterEmits<SearchObject> {}

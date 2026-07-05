@@ -1,7 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "vue-custom-props.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": ["src/**/__tests__/*", "src/regira_modules/**"],
+  "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     // Extra safety for array and object lookups, but may have false positives.
     "noUncheckedIndexedAccess": true,
@@ -12,7 +12,6 @@
 
     // Path mapping for cleaner imports.
     "paths": {
-      //"@/regira_modules/*": ["./node_modules/regira_modules/dist/*"],
       "@/*": ["./src/*"]
     },
     "jsx": "preserve",

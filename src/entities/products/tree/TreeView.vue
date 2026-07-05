@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts">
-import { TreeNode, type TreeList } from "@/regira_modules/treelist"
-import { useDragDrop, type DragDropEmits, type DragDropEngine } from "@/regira_modules/vue/entities/tree"
+import { TreeNode, type TreeList } from "regira_modules/treelist"
+import { useDragDrop, type DragDropEmits, type DragDropEngine } from "regira_modules/vue/entities"
 import { Entity as Facet } from "../../facets"
 import { Entity as Party } from "../../parties"
 import type Entity from "../data/Entity"

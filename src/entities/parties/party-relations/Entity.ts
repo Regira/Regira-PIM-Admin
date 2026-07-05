@@ -1,4 +1,4 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 import type PartyRelationshipType from "@/entities/party-relationship-types/data/Entity"
 import type PartyContactData from "../party-contact-data/Entity"
 import type { Party } from "../data/Entity"

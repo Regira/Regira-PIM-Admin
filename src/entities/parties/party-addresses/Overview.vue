@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-import { useOwnedCollection } from "@/regira_modules/vue/entities"
+import { useOwnedCollection } from "regira_modules/vue/entities"
 import type Party from "../data/Entity"
 import type Entity from "./Entity"
 import List from "./List.vue"

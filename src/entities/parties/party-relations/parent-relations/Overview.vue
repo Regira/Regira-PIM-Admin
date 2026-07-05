@@ -33,8 +33,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import { TabContainer, Tab } from "@/regira_modules/vue/ui"
-import { useLang } from "@/regira_modules/vue/lang"
+import { TabContainer, Tab } from "regira_modules/vue/ui"
+import { useLang } from "regira_modules/vue/lang"
 import Entity from "../Entity"
 import PartyTypes from "../../data/PartyTypes"
 import type Party from "../../data/Entity"

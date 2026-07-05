@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { type OverviewEmits } from "@/regira_modules/vue/entities"
+import { type OverviewEmits } from "regira_modules/vue/entities"
 import { useEntityStore as useUnitTypeStore, FormModalButton as UnitTypeButton } from "@/entities/unit-types"
 import type Entity from "../data/Entity"
 import useEntityStore from "../data/store"

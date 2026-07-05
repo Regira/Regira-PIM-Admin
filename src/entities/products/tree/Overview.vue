@@ -66,10 +66,9 @@
 
 <script setup lang="ts">
 import { ref, computed, watchEffect } from "vue"
-import { distinctBy } from "@/regira_modules/utilities/array-utility"
-import { LoadingContainer } from "@/regira_modules/vue/ui"
-import { get } from "@/regira_modules/vue/ioc"
-import { TreeList, TreeNode } from "@/regira_modules/treelist"
+import { distinctBy } from "regira_modules/utilities/array-utility"
+import { get } from "regira_modules/vue/ioc"
+import { TreeList, TreeNode } from "regira_modules/treelist"
 import TreeItem from "./TreeItem"
 import TreeView from "./TreeView.vue"
 import ProductAssembly from "../product-assemblies/Entity"

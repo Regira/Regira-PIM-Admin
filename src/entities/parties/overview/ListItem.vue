@@ -50,9 +50,9 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { distinctBy } from "@/regira_modules/utilities/array-utility"
-import { ModalType, ConfirmButton } from "@/regira_modules/vue/ui"
-import type { SaveResult } from "@/regira_modules/vue/entities"
+import { distinctBy } from "regira_modules/utilities/array-utility"
+import { ModalType, ConfirmButton } from "regira_modules/vue/ui"
+import type { SaveResult } from "regira_modules/vue/entities"
 import { AddressButton, formatCity } from "../party-addresses"
 import { ContactDetails, ActionButton, ContactDataTypes } from "../party-contact-data"
 import config from "../config/config"

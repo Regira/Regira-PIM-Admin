@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { copyTextToClipboard } from "@/regira_modules/utilities/clipboard-utility"
+import { clipboardUtility as copyTextToClipboard } from "regira_modules/utilities"
 import { getDataType } from "./functions"
 import type Entity from "./Entity"
 import ContactDataTypes from "./ContactDataTypes"

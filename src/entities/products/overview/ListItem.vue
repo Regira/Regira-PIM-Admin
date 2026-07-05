@@ -39,9 +39,9 @@
 </template>
 
 <script setup lang="ts">
-import { ModalType, ConfirmButton } from "@/regira_modules/vue/ui"
-import { formatCurrency } from "@/regira_modules/vue/formatters"
-import { type SaveResult } from "@/regira_modules/vue/entities"
+import { ModalType, ConfirmButton } from "regira_modules/vue/ui"
+import { formatCurrency } from "regira_modules/vue/formatters"
+import { type SaveResult } from "regira_modules/vue/entities"
 import { useEntityStore as useUnitTypeStore, FormModalButton as UnitTypeButton } from "@/entities/unit-types"
 import { useEntityStore as useFacetStore, FormModalButton as FacetButton } from "@/entities/facets"
 import config from "../config/config"

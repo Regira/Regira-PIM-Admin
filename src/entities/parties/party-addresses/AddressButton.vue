@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { GMapButton } from "@/regira_modules/vue/ui"
+import { GMapButton } from "regira_modules/vue/ui"
 import type Address from "./Entity"
 
 defineProps<{

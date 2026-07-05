@@ -41,13 +41,13 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import useOwnedCollection from "@/regira_modules/vue/entities/form/ownedCollections"
+import { useOwnedCollection } from "regira_modules/vue/entities/form"
 import type Party from "../data/Entity"
 import { getDataType } from "./functions"
 import Entity from "./Entity"
 import List from "./List.vue"
 import ActionButton from "./ActionButton.vue"
-import { useLang, type ITranslationMessage } from "@/regira_modules/vue/lang"
+import { useLang, type ITranslationMessage } from "regira_modules/vue/lang"
 
 const emit = defineEmits<{
     (e: "update:modelValue", args: Array<Entity>): void

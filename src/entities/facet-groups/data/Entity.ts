@@ -1,4 +1,4 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 import type FacetChildGroup from "../facet-group-links/Entity"
 import type FacetParentGroup from "../facet-group-links/Entity"
 

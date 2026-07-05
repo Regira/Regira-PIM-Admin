@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFilter, type FilterEmits } from "@/regira_modules/vue/entities"
+import { useFilter, type FilterEmits } from "regira_modules/vue/entities"
 import config from "../config/config"
 import SearchObject from "./SearchObject"
 

@@ -79,7 +79,7 @@
 
 <script setup lang="ts">
 import { ref, watchEffect } from "vue"
-import { useFilter, type FilterEmits } from "@/regira_modules/vue/entities"
+import { useFilter, type FilterEmits } from "regira_modules/vue/entities"
 import type Facet from "../data/Entity"
 import FacetInputSelector from "../selecting/InputSelector.vue"
 import useEntityStore from "../data/store"

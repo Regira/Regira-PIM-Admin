@@ -1,4 +1,4 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 
 export class PartyRelationshipType extends EntityBase {
     id: number = 0

@@ -12,8 +12,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue"
-import { useAxios } from "@/regira_modules/vue/http"
-import { useAuthStore } from "@/regira_modules/vue/auth"
+import { useAxios } from "regira_modules/vue/http"
+import { useAuthStore } from "regira_modules/vue/auth"
 import type PimUser from "./Entity"
 import ListItem from "./ListItem.vue"
 import UserInput from "./UserInput.vue"

@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts">
-import type { TreeNode } from "@/regira_modules/treelist"
-import { useDragDrop, type DragDropEmits, type DragDropEngine } from "@/regira_modules/vue/entities/tree"
+import type { TreeNode } from "regira_modules/treelist"
+import { useDragDrop, type DragDropEmits, type DragDropEngine } from "regira_modules/vue/entities"
 import type Entity from "../data/Entity"
 import type TreeItem from "./TreeItem"
 import TreeViewItem from "./TreeViewItem.vue"

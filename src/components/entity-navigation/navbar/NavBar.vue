@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { NavItem } from "@/regira_modules/vue/entities"
+import { NavItem } from "regira_modules/vue/entities"
 import { useNavigation } from "../functions"
 import NavBarItem from "./NavBarItem.vue"
 

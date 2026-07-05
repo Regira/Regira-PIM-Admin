@@ -56,10 +56,10 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue"
-import { useAxios } from "@/regira_modules/vue/http"
-import { LoadingContainer, Feedback, useFeedback } from "@/regira_modules/vue/ui"
-import { useAuthStore } from "@/regira_modules/vue/auth"
-import { useLang } from "@/regira_modules/vue/lang"
+import { useAxios } from "regira_modules/vue/http"
+import { Feedback, useFeedback } from "regira_modules/vue/ui"
+import { useAuthStore } from "regira_modules/vue/auth"
+import { useLang } from "regira_modules/vue/lang"
 import { useConfig } from "@/app-config"
 
 const { translate } = useLang()

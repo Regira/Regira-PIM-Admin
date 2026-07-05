@@ -76,9 +76,9 @@
 
 <script setup lang="ts">
 import type { RouteRecordRaw } from "vue-router"
-import { Feedback } from "@/regira_modules/vue/ui"
+import { Feedback } from "regira_modules/vue/ui"
 import { FormButtonsRow } from "@/components/input"
-import { useForm, type FormEmits, formDefaults } from "@/regira_modules/vue/entities"
+import { useForm, type FormEmits, formDefaults } from "regira_modules/vue/entities"
 import config from "../config/config"
 import Entity from "../data/Entity"
 import useEntityStore from "../data/store"

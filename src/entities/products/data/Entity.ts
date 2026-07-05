@@ -1,4 +1,4 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 import { type Entity as UnitType } from "@/entities/unit-types"
 import type ProductComponent from "../product-components/Entity"
 import type ProductFacet from "../product-facets/Entity"

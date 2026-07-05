@@ -1,6 +1,6 @@
 import { type App, watch } from "vue"
-import { useAuthStore } from "@/regira_modules/vue/auth"
-import { useLang } from "@/regira_modules/vue/lang"
+import { useAuthStore } from "regira_modules/vue/auth"
+import { useLang } from "regira_modules/vue/lang"
 import Permissions from "@/infrastructure/permissions"
 
 declare module "@vue/runtime-core" {

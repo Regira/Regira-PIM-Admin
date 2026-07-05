@@ -43,8 +43,8 @@
 <script setup lang="ts">
 import { ref, reactive, computed, watchEffect } from "vue"
 import { useRouter } from "vue-router"
-import { LoadingContainer, Feedback, useFeedback } from "@/regira_modules/vue/ui"
-import { useAuth, useAuthStore, type IResetPasswordInput } from "@/regira_modules/vue/auth"
+import { Feedback, useFeedback } from "regira_modules/vue/ui"
+import { useAuth, useAuthStore, type IResetPasswordInput } from "regira_modules/vue/auth"
 
 const router = useRouter()
 const feedback = useFeedback()

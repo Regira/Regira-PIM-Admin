@@ -1,5 +1,5 @@
 import type { AxiosInstance, AxiosResponse } from "axios"
-import { EntityServiceBase, type IConfig, type ListResult } from "@/regira_modules/vue/entities"
+import { EntityServiceBase, type IConfig, type ListResult } from "regira_modules/vue/entities"
 import { FamilyItem } from "../tree"
 import Entity from "./Entity"
 

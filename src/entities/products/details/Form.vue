@@ -129,10 +129,10 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import type { RouteRecordRaw } from "vue-router"
-import { useLang } from "@/regira_modules/vue/lang"
-import { Feedback, TabContainer, Tab, useScreen } from "@/regira_modules/vue/ui"
+import { useLang } from "regira_modules/vue/lang"
+import { Feedback, TabContainer, Tab, useScreen } from "regira_modules/vue/ui"
 import { FormButtonsRow } from "@/components/input"
-import { useForm, type FormEmits, formDefaults } from "@/regira_modules/vue/entities"
+import { useForm, type FormEmits, formDefaults } from "regira_modules/vue/entities"
 import { SelectorDropdown as UnitTypeInputSelector } from "@/entities/unit-types"
 import AssemblyOverview from "@/entities/products/product-assemblies/Overview.vue"
 import ComponentOverview from "@/entities/products/product-components/Overview.vue"

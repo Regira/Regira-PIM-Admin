@@ -1,5 +1,5 @@
-import { JSONService } from "@/regira_modules/vue/entities"
-import { useAxios } from "@/regira_modules/vue/http"
+import { JSONService } from "regira_modules/vue/entities"
+import { useAxios } from "regira_modules/vue/http"
 import Country from "./Entity"
 import config from "../config/config"
 

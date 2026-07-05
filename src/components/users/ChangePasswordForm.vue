@@ -55,9 +55,9 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed } from "vue"
-import { LoadingContainer, Feedback, useFeedback } from "@/regira_modules/vue/ui"
-import { useAuth } from "@/regira_modules/vue/auth"
-import { useLang } from "@/regira_modules/vue/lang"
+import { Feedback, useFeedback } from "regira_modules/vue/ui"
+import { useAuth } from "regira_modules/vue/auth"
+import { useLang } from "regira_modules/vue/lang"
 
 const emit = defineEmits<{
     (e: "change-password"): void

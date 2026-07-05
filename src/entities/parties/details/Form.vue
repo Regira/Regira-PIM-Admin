@@ -180,10 +180,10 @@
 <script setup lang="ts">
 import { computed, watch } from "vue"
 import type { RouteRecordRaw } from "vue-router"
-import { useLang } from "@/regira_modules/vue/lang"
-import { Feedback, TabContainer, Tab } from "@/regira_modules/vue/ui"
+import { useLang } from "regira_modules/vue/lang"
+import { Feedback, TabContainer, Tab } from "regira_modules/vue/ui"
 import { FormButtonsRow } from "@/components/input"
-import { useForm, type FormEmits, formDefaults } from "@/regira_modules/vue/entities"
+import { useForm, type FormEmits, formDefaults } from "regira_modules/vue/entities"
 import { config as productConfig } from "@/entities/products"
 import { config as partyRelationshipTypeConfig } from "@/entities/party-relationship-types"
 import config from "../config/config"

@@ -31,7 +31,6 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-import { LoadingContainer } from "@/regira_modules/vue/ui"
 import Entity from "./Entity"
 import { saveUser, buildConfirmEmailUrl } from "./functions"
 

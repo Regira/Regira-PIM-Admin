@@ -37,8 +37,8 @@
 <script setup lang="ts">
 import { onMounted } from "vue"
 import ResultSummary from "@/components/ResultSummary.vue"
-import { Paging, LoadingContainer, ButtonType } from "@/regira_modules/vue/ui"
-import { useSearchView } from "@/regira_modules/vue/entities"
+import { ButtonType } from "regira_modules/vue/ui"
+import { useSearchView } from "regira_modules/vue/entities"
 import List from "./List.vue"
 import Filter from "../filter/Filter.vue"
 import Entity from "../data/Entity"

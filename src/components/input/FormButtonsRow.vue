@@ -47,9 +47,9 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import { FeedbackStatus, type FeedbackOut } from "@/regira_modules/vue/ui/feedback"
-import { ConfirmButton, ModalType } from "@/regira_modules/vue/ui"
-import type { IEntity } from "@/regira_modules/vue/entities"
+import { FeedbackStatus, type FeedbackOut } from "regira_modules/vue/ui/feedback"
+import { ConfirmButton, ModalType } from "regira_modules/vue/ui"
+import type { IEntity } from "regira_modules/vue/entities"
 
 const emit = defineEmits<{
     (e: "cancel"): void

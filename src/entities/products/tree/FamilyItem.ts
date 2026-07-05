@@ -1,4 +1,4 @@
-//import type { IEntity } from "@/regira_modules/vue/entities"
+//import type { IEntity } from "regira_modules/vue/entities"
 import type Entity from "../data/Entity"
 
 export class FamilyItem /* implements IEntity */ {

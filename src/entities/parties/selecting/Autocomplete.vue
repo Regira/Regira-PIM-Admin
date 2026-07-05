@@ -19,9 +19,9 @@
 
 <script setup lang="ts">
 import { ref, computed, watch } from "vue"
-import { Autocomplete } from "@/regira_modules/vue/ui"
-import { get } from "@/regira_modules/vue/ioc"
-import type { IEntityService } from "@/regira_modules/vue/entities"
+import { Autocomplete } from "regira_modules/vue/ui"
+import { get } from "regira_modules/vue/ioc"
+import type { IEntityService } from "regira_modules/vue/entities"
 import Entity from "../data/Entity"
 import useEntityStore from "../data/store"
 import { formatCity } from "../party-addresses"

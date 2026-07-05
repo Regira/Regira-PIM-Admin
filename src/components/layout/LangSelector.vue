@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { useLang } from "@/regira_modules/vue/lang"
+import { useLang } from "regira_modules/vue/lang"
 
 const { langCode, setLangCode } = useLang()
 </script>

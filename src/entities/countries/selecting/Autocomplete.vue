@@ -18,8 +18,8 @@
 
 <script setup lang="ts">
 import { type Ref, ref, computed } from "vue"
-import { Autocomplete } from "@/regira_modules/vue/ui"
-import { getInitials } from "@/regira_modules/vue/formatters"
+import { Autocomplete } from "regira_modules/vue/ui"
+import { getInitials } from "regira_modules/vue/formatters"
 import type Entity from "../data/Entity"
 import useEntityStore from "../data/store"
 

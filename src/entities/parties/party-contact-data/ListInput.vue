@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import Draggable from "vuedraggable"
-import { useListInput, type SaveResult } from "@/regira_modules/vue/entities"
+import { useListInput, type SaveResult } from "regira_modules/vue/entities"
 import type Entity from "./Entity"
 import Form from "./Form.vue"
 import FormModalButton from "./FormModalButton.vue"

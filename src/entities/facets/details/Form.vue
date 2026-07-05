@@ -92,9 +92,9 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import type { RouteRecordRaw } from "vue-router"
-import { useLang } from "@/regira_modules/vue/lang"
-import { Feedback, TabContainer, Tab } from "@/regira_modules/vue/ui"
-import { useForm, type FormEmits, formDefaults } from "@/regira_modules/vue/entities"
+import { useLang } from "regira_modules/vue/lang"
+import { Feedback, TabContainer, Tab } from "regira_modules/vue/ui"
+import { useForm, type FormEmits, formDefaults } from "regira_modules/vue/entities"
 import { FormButtonsRow } from "@/components/input"
 import { config as productConfig } from "@/entities/products"
 import { Overview as RelatedFacetsOverview } from "../facet-related-facets"

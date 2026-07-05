@@ -11,8 +11,8 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { orderBy } from "@/regira_modules/utilities/array-utility"
-import { iconMap } from "@/regira_modules/vue/ui/icons"
+import { orderBy } from "regira_modules/utilities/array-utility"
+import { iconMap } from "regira_modules/vue/ui/icons"
 
 const icons = computed(() =>
     orderBy(

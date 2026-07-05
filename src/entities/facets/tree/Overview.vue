@@ -49,10 +49,9 @@
 
 <script setup lang="ts">
 import { ref, computed, watchEffect } from "vue"
-import { distinctBy } from "@/regira_modules/utilities/array-utility"
-import { LoadingContainer } from "@/regira_modules/vue/ui"
-import { get } from "@/regira_modules/vue/ioc"
-import { TreeList, TreeNode } from "@/regira_modules/treelist"
+import { distinctBy } from "regira_modules/utilities/array-utility"
+import { get } from "regira_modules/vue/ioc"
+import { TreeList, TreeNode } from "regira_modules/treelist"
 import { config, Entity, type EntityService, useEntityStore } from "../../facets"
 import { config as facetGroupConfig, useEntityStore as useFacetGroupStore } from "../../facet-groups"
 import { toTree } from "./functions"

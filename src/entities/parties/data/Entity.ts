@@ -1,10 +1,10 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 import type PartyAddress from "../party-addresses/Entity"
 import type PartyContactData from "../party-contact-data/Entity"
 import type { PartyRelationship } from "../party-relations/Entity"
 import { ContactDataTypes } from "../party-contact-data"
 import { PartyTypes } from "./PartyTypes"
-import { getInitials } from "@/regira_modules/vue/formatters"
+import { getInitials } from "regira_modules/vue/formatters"
 
 export class Party extends EntityBase {
     id: number = 0

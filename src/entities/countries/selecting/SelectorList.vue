@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IPagingInfo } from "@/regira_modules/vue/entities"
+import type { IPagingInfo } from "regira_modules/vue/entities"
 import { computed } from "vue"
 import type Entity from "../data/Entity"
 import useEntityStore from "../data/store"

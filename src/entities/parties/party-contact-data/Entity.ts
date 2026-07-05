@@ -1,4 +1,4 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 import type ContactDataTypes from "./ContactDataTypes"
 
 export class ContactDetails extends EntityBase {

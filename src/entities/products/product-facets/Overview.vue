@@ -32,7 +32,6 @@ import { computed, ref } from "vue"
 import type Product from "../data/Entity"
 import ProductFacet from "./Entity"
 import InputSelector from "@/entities/facets/selecting/InputSelector.vue"
-import { Debug } from "@/regira_modules/vue/debug"
 import FormModalButton from "@/entities/facets/details/FormModalButton.vue"
 
 const props = defineProps<{

@@ -44,9 +44,9 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import { useLang } from "@/regira_modules/vue/lang"
-import { Paging, LoadingContainer, ButtonType } from "@/regira_modules/vue/ui"
-import { useSearchView } from "@/regira_modules/vue/entities"
+import { useLang } from "regira_modules/vue/lang"
+import { ButtonType, ResultSummary } from "regira_modules/vue/ui"
+import { useSearchView } from "regira_modules/vue/entities"
 import config from "../config/config"
 import Entity from "../data/Entity"
 import useEntityStore from "../data/store"

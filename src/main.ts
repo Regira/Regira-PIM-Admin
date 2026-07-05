@@ -1,29 +1,30 @@
 import { createApp } from "vue"
 import { createPinia } from "pinia"
 import type { RouteRecordRaw } from "vue-router"
+import { initAxios } from "regira_modules/vue/http"
+import { plugin as servicesPlugin, configureGlobals, type IServiceProvider } from "regira_modules/vue/ioc"
+import { AppStatus, plugin as appPlugin, whenAppReady } from "regira_modules/vue/app"
+import { plugin as langPlugin, useLang } from "regira_modules/vue/lang"
 import {
-    Anchor,
-    FormSection,
-    DateInput,
-    FormLabel,
-    NullableCheckBox,
     iconPlugin,
     loadingPlugin,
     screenPlugin,
-    modalPlugin,
     feedbackPlugin,
+    pagingPlugin,
+    modalPlugin,
+    Anchor,
+    FormSection,
+    FormLabel,
+    DateInput,
+    NullableCheckBox,
     NullableLabel,
-} from "@/regira_modules/vue/ui"
-import { focus, grow, clickOutside } from "@/regira_modules/vue/directives"
-import { AppStatus, plugin as appPlugin, whenAppReady } from "@/regira_modules/vue/app"
-import { plugin as langPlugin, useLang } from "@/regira_modules/vue/lang"
-import { plugin as isOnlinePlugin } from "@/regira_modules/vue/online"
-import { plugin as debugPlugin } from "@/regira_modules/vue/debug"
-import { preloaderPlugin, usePreloader, defaultPoolCache, PoolCache } from "@/regira_modules/vue/entities"
-import { initAxios } from "@/regira_modules/vue/http"
-import { plugin as authPlugin, LocalStorageTokenManager } from "@/regira_modules/vue/auth"
-import { plugin as servicesPlugin, type IServiceProvider } from "@/regira_modules/vue/ioc"
-import { formatDateTime } from "@/regira_modules/vue/formatters"
+} from "regira_modules/vue/ui"
+import { focus, grow, clickOutside } from "regira_modules/vue/directives"
+import { plugin as isOnlinePlugin } from "regira_modules/vue/online"
+import { plugin as debugPlugin } from "regira_modules/vue/debug"
+import { preloaderPlugin, usePreloader, defaultPoolCache, PoolCache } from "regira_modules/vue/entities"
+import { plugin as authPlugin, LocalStorageTokenManager } from "regira_modules/vue/auth"
+import { formatDateTime } from "regira_modules/vue/formatters"
 import appConfig, { createConfig, useConfig } from "@/app-config"
 import { routerFactory } from "@/router"
 import { plugin as userPlugin } from "@/infrastructure/user-plugin"
@@ -38,11 +39,17 @@ import DescriptionInput from "@/components/input/DescriptionInput.vue"
 import PimModal from "@/components/layout/PimModal.vue"
 
 // date serialization to JSON (without timezone)
-import dateSerializer from "@/regira_modules/extensions/date-extensions"
+import dateSerializer from "regira_modules/extensions/date-extensions"
 dateSerializer.use()
 
-// Assets
-import "@/regira_modules/vue/ui/autocomplete/style.scss"
+// opt in to app-wide component registration (Icon, IconButton, Loading*, Paging, MyModal, Debug)
+// — must be set before the plugins install
+configureGlobals({ registerComponentsGlobally: true })
+
+// Assets — Bootstrap 5 + icons via npm, library component styles (modal backdrop, autocomplete dropdown)
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap-icons/font/bootstrap-icons.css"
+import "regira_modules/style.css"
 import "./assets/base.scss"
 import "./assets/main.scss"
 import loadingImg from "@/assets/images/loading.gif"
@@ -74,15 +81,6 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
 
         app.use(appPlugin, { culture: processedConfig.culture })
 
-        // global components (use explicit naming -> functions are renamed when minimized in build)
-        app.component("MyAnchor", Anchor)
-        app.component("FormSection", FormSection)
-        app.component("DateInput", DateInput)
-        app.component("NullableCheckBox", NullableCheckBox)
-        app.component("NullableLabel", NullableLabel)
-        app.component("FormLabel", FormLabel)
-        app.component("DescriptionInput", DescriptionInput)
-
         // services
         app.use(servicesPlugin, {
             configure: (sp: IServiceProvider) => {
@@ -96,14 +94,24 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
             },
         })
 
+        // UI plugins (registerComponentsGlobally is on — plugins register their components app-wide)
         const appIcons = await fetch(`${appConfig.baseUrl}/data/app-icons.json?v=${formatDateTime(new Date(), "yyyyMMdd")}`).then((r) => r.json())
         app.use(iconPlugin, { icons: appIcons, source: "bs", clearFirst: false })
         app.use(screenPlugin)
         app.use(isOnlinePlugin)
-        app.use(debugPlugin, { isDebug: config.isDebug })
         app.use(loadingPlugin, { img: loadingImg })
+        app.use(pagingPlugin)
         app.use(modalPlugin, { DefaultModal: PimModal })
         app.use(feedbackPlugin, { autoHideDelay: 2500 })
+
+        // global components not covered by the plugins (use explicit naming -> functions are renamed when minimized in build)
+        app.component("MyAnchor", Anchor)
+        app.component("FormSection", FormSection)
+        app.component("FormLabel", FormLabel)
+        app.component("DateInput", DateInput)
+        app.component("NullableCheckBox", NullableCheckBox)
+        app.component("NullableLabel", NullableLabel)
+        app.component("DescriptionInput", DescriptionInput)
 
         // lang
         app.use(langPlugin, {
@@ -130,7 +138,10 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
         // preloader
         app.use(preloaderPlugin)
 
-        // auth
+        // debug (needs the router; shows only when ?debug=1 / isDebug)
+        app.use(debugPlugin, { isDebug: config.isDebug })
+
+        // auth last (needs the router on the app)
         app.use(authPlugin, {
             enabled: true,
             clientApp: processedConfig.clientApp,
@@ -156,7 +167,7 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
 
                     const lang = (Array.isArray(auth.culture) ? (auth.culture![0] as string) : (auth.culture as string)).split("-")[0]
                     setLangCode(lang || "en")
-                    
+
                     document.title = translateMessage(processedConfig.title)
 
                     console.debug("ready", {
@@ -180,7 +191,4 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
         app.mount("#app")
 
         await whenAppReady()
-
-        // Welcome
-        //app.config.globalProperties.$feedback.success("Welcome, the app is ready")
     })

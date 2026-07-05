@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import type { Ref } from "vue"
-import { useOwnedModal, type SaveResult } from "@/regira_modules/vue/entities"
+import { useOwnedModal, type SaveResult } from "regira_modules/vue/entities"
 import Entity from "./Entity"
 import Form from "./Form.vue"
 

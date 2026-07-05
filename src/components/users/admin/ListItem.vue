@@ -43,7 +43,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import { Loading } from "@/regira_modules/vue/ui"
 import Permissions from "@/infrastructure/permissions"
 import Entity from "./Entity"
 import { saveUser, isAdmin } from "./functions"

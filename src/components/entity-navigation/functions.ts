@@ -1,5 +1,5 @@
 import { ref, computed, getCurrentInstance } from "vue"
-import { type IConfig, type INavItem, importDashboard, importNavbar, buildNavigationTree, type INavCore } from "@/regira_modules/vue/entities"
+import { type IConfig, type INavItem, importDashboard, importNavbar, buildNavigationTree, type INavCore } from "regira_modules/vue/entities"
 import { useConfig } from "@/app-config"
 
 export function useNavigation() {

@@ -62,9 +62,9 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { orderBy } from "@/regira_modules/utilities/array-utility"
-import { type TreeNode } from "@/regira_modules/treelist"
-import { type DragDropEmits, type DragDropEngine } from "@/regira_modules/vue/entities/tree"
+import { orderBy } from "regira_modules/utilities/array-utility"
+import { type TreeNode } from "regira_modules/treelist"
+import { type DragDropEmits, type DragDropEngine } from "regira_modules/vue/entities"
 import { Entity, useEntityStore, FormModalButton } from "../"
 import { Entity as Facet, FormModalButton as FacetButton } from "../../facets"
 import { Entity as Party, FormModalButton as PartyButton } from "../../parties"

@@ -1,4 +1,4 @@
-import { TreeList, type TreeNode } from "@/regira_modules/treelist"
+import { TreeList, type TreeNode } from "regira_modules/treelist"
 import type Entity from "../data/Entity"
 import type FamilyItem from "./FamilyItem"
 import { TreeItem, ChildItem } from "./TreeItem"

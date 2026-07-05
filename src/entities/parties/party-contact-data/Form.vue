@@ -35,7 +35,7 @@ import type Entity from "./Entity"
 import ActionButton from "./ActionButton.vue"
 import { getDataType } from "./functions"
 import { DescriptionInput } from "@/components/input"
-import { useLang, type ITranslationMessage } from "@/regira_modules/vue/lang"
+import { useLang, type ITranslationMessage } from "regira_modules/vue/lang"
 
 const props = defineProps<{
     readonly?: boolean

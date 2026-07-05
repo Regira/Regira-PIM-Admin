@@ -78,8 +78,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import { useVModelField } from "@/regira_modules/vue/vue-helper"
-import { useLang, type ITranslationMessage } from "@/regira_modules/vue/lang"
+import { useVModelField } from "regira_modules/vue/vue-helper"
+import { useLang, type ITranslationMessage } from "regira_modules/vue/lang"
 import { type Entity as Country, InputSelector as CountrySelector } from "../../countries"
 import type Entity from "./Entity"
 

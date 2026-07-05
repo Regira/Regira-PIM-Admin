@@ -1,4 +1,4 @@
-import { EntityBase } from "@/regira_modules/vue/entities"
+import { EntityBase } from "regira_modules/vue/entities"
 import type Party from "@/entities/parties/data/Entity"
 
 export class ProductSupplier extends EntityBase {

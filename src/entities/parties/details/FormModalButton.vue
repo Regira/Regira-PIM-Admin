@@ -11,8 +11,8 @@
                 :showFooter="false"
                 :full-width="fullWidth"
                 @close="close"
-                @cancel="handleCancel"
-                @submit="handleSave"
+                @cancel="close"
+                @submit="close"
             >
                 <Form
                     v-model="item"
@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import { computed, type Ref } from "vue"
-import { FormStates, useModal, type FormModalEmits, type SaveResult } from "@/regira_modules/vue/entities"
+import { FormStates, useModal, type FormModalEmits, type SaveResult } from "regira_modules/vue/entities"
 import config from "../config/config"
 import Entity from "../data/Entity"
 import useEntityStore from "../data/store"

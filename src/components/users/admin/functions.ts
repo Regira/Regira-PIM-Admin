@@ -1,5 +1,5 @@
 import type { Router } from "vue-router"
-import { useAxios } from "@/regira_modules/vue/http"
+import { useAxios } from "regira_modules/vue/http"
 import { useConfig } from "@/app-config"
 import Permissions from "@/infrastructure/permissions"
 import Entity from "./Entity"

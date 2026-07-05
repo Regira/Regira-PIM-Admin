@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import { useFilter, type FilterEmits } from "@/regira_modules/vue/entities"
+import { useFilter, type FilterEmits } from "regira_modules/vue/entities"
 import type Party from "../data/Entity"
 import PartyTypes from "../data/PartyTypes"
 import SearchObject from "./SearchObject"

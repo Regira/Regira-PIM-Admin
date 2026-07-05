@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { useOwnedModal, type SaveResult } from "@/regira_modules/vue/entities"
+import { useOwnedModal, type SaveResult } from "regira_modules/vue/entities"
 import type Party from "../../data/Entity"
 import Entity from "../Entity"
 import Form from "./Form.vue"

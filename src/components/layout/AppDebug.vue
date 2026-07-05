@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import "@/regira_modules/vue/debug"
+import "regira_modules/vue/debug"
 import { useRouter } from "vue-router"
 
 const router = useRouter()

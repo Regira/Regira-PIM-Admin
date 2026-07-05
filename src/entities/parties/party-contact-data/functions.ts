@@ -1,4 +1,4 @@
-import { isEmail, isUrl, isPhone } from "@/regira_modules/utilities/string-utility"
+import { isEmail, isUrl, isPhone } from "regira_modules/utilities/string-utility"
 import ContactDataTypes from "./ContactDataTypes"
 import type Entity from "./Entity"
 

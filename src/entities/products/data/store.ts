@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
-import { get } from "@/regira_modules/vue/ioc"
-import { createStore, type IEntityService } from "@/regira_modules/vue/entities"
+import { get } from "regira_modules/vue/ioc"
+import { createStore, type IEntityService } from "regira_modules/vue/entities"
 import Entity from "./Entity"
 
 export const useEntityStore = defineStore(Entity.name, () => {

@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import type { OverviewEmits } from "@/regira_modules/vue/entities"
+import type { OverviewEmits } from "regira_modules/vue/entities"
 import { useEntityStore as useUnitTypeStore } from "@/entities/unit-types"
 import useEntityStore from "../data/store"
 import Entity from "../data/Entity"
