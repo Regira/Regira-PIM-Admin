@@ -44,8 +44,7 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue"
-import ResultSummary from "@/components/ResultSummary.vue"
-import { ButtonType } from "regira_modules/vue/ui"
+import { ButtonType, ResultSummary } from "regira_modules/vue/ui"
 import { useSearchView } from "regira_modules/vue/entities"
 import List from "@/entities/parties/overview/List.vue"
 import Filter from "@/entities/parties/filter/Filter.vue"

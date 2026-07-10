@@ -50,8 +50,7 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue"
-import ResultSummary from "@/components/ResultSummary.vue"
-import { ButtonType } from "regira_modules/vue/ui"
+import { ButtonType, ResultSummary } from "regira_modules/vue/ui"
 import { useSearchView } from "regira_modules/vue/entities"
 import { type Entity, List, FilterInline, useEntityStore } from "@/entities/products"
 import type Facet from "../data/Entity"

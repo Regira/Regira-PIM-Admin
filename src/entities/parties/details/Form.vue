@@ -138,7 +138,11 @@
                 <AddressesOverview v-model="item.addresses" :party="item" />
 
                 <FormSection :title="$t('description')">
-                    <DescriptionInput v-model="item.description" :label="$t('description')" :readonly="readonly" />
+                    <div class="row">
+                        <div class="col mb-2">
+                            <DescriptionInput v-model="item.description" :label="$t('description')" :readonly="readonly" />
+                        </div>
+                    </div>
                 </FormSection>
             </template>
 

@@ -72,8 +72,7 @@
 <script setup lang="ts">
 import { onMounted, type Ref } from "vue"
 import { useSearchView } from "regira_modules/vue/entities"
-import { Feedback, ButtonType } from "regira_modules/vue/ui"
-import ResultSummary from "@/components/ResultSummary.vue"
+import { Feedback, ButtonType, ResultSummary } from "regira_modules/vue/ui"
 import config from "../config/config"
 import Entity from "../data/Entity"
 import SearchObject from "../filter/SearchObject"

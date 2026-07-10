@@ -18,6 +18,7 @@ import {
     DateInput,
     NullableCheckBox,
     NullableLabel,
+    DescriptionInput,
 } from "regira_modules/vue/ui"
 import { focus, grow, clickOutside } from "regira_modules/vue/directives"
 import { plugin as isOnlinePlugin } from "regira_modules/vue/online"
@@ -35,7 +36,6 @@ import { Entity as UnitType } from "@/entities/unit-types"
 import { Entity as RelationshipType } from "@/entities/party-relationship-types"
 
 import App from "@/App.vue"
-import DescriptionInput from "@/components/input/DescriptionInput.vue"
 import PimModal from "@/components/layout/PimModal.vue"
 
 // date serialization to JSON (without timezone)

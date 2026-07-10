@@ -25,7 +25,11 @@
         </div>
 
         <!-- Description -->
-        <DescriptionInput v-model="item.description" :stacked="true" />
+        <div class="row">
+            <div class="col-md mb-2">
+                <DescriptionInput v-model="item.description" :label="$t('description')" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -34,7 +38,6 @@ import { computed } from "vue"
 import type Entity from "./Entity"
 import ActionButton from "./ActionButton.vue"
 import { getDataType } from "./functions"
-import { DescriptionInput } from "@/components/input"
 import { useLang, type ITranslationMessage } from "regira_modules/vue/lang"
 
 const props = defineProps<{
