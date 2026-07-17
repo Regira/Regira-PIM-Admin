@@ -1,5 +1,3 @@
-$bgLight: rgba(13, 202, 240, 0.25);
-
 #app {
     height: 100vh;
     //overflow: auto;
@@ -71,14 +69,14 @@ a[disabled] {
 
 .feedback-container {
     height: 2.25rem;
-    background-color: $bgLight;
+    background-color: var(--rg-accent-bg);
 }
 
 .form-section {
     border: 1px solid #dee2e6;
 
     .form-section-title {
-        background-color: $bgLight;
+        background-color: var(--rg-accent-bg);
     }
 
     .form-section-body {

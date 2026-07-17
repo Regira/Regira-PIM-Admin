@@ -40,12 +40,12 @@
 </template>
 
 <script setup lang="ts">
-import { useLoginForm, type ILoginEmits, type ILoginProps } from "regira_modules/vue/auth"
+import { useLoginForm, type LoginFormEmits, type LoginFormProps } from "regira_modules/vue/auth"
 
-interface IEmits extends /* @vue-ignore */ ILoginEmits {}
+interface IEmits extends /* @vue-ignore */ LoginFormEmits {}
 const emit = defineEmits<IEmits>()
 
-const props: ILoginProps = defineProps<{
+const props: LoginFormProps = defineProps<{
     username?: string
     signingIn?: boolean
 }>()

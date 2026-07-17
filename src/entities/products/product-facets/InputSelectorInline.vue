@@ -1,44 +1,20 @@
 <template>
-    <div class="row">
-        <template v-for="item in items" :key="item.id">
-            <div class="col-auto mb-2 pe-0">
-                <div class="form-control p-0" :class="{ 'is-deleted': item._deleted }">
-                    <FormModalButton :modelValue="item.facet" />
-                    {{ item.facet?.title ?? "" }}
-                    <button type="button" class="btn btn-outline-danger border-0" @click="handleRemove(item)">
-                        <Icon name="delete" />
-                    </button>
-                </div>
-            </div>
+    <InputSelectorInline v-model="model.facets" :row-key="(r) => r.facetId" :exclude-key="(r) => r.facetId">
+        <template #chip="{ row }">
+            <FormModalButton :modelValue="row.facet" /> {{ row.facet?.title ?? "" }}
         </template>
-        <div class="col-auto mb-2">
-            <InputSelector @select="handleAdd" :filterDefaults="{ exclude: excludeIds }" />
-        </div>
-    </div>
+        <template #selector="{ add, exclude }">
+            <InputSelector :filter-defaults="{ exclude }"
+                @select="(f?: Facet) => f && add(ProductFacet.create({ productId: model.id, facetId: f.id, facet: f }))" />
+        </template>
+    </InputSelectorInline>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue"
+import { InputSelectorInline } from "regira_modules/vue/entities/form"
 import type Product from "../data/Entity"
 import ProductFacet from "./Entity"
 import { type Entity as Facet, InputSelector, FormModalButton } from "@/entities/facets"
 
 const model = defineModel<Product>({ required: true })
-const items = computed(() => model.value.facets ?? [])
-const excludeIds = computed(() => items.value.map((i) => i.facetId))
-
-function handleRemove(item: ProductFacet) {
-    item._deleted = !item._deleted
-}
-
-function handleAdd(item?: Facet) {
-    if (!model.value.facets) model.value.facets = []
-    model.value.facets.push(
-        ProductFacet.create({
-            productId: model.value.id,
-            facetId: item?.id,
-            facet: item,
-        })
-    )
-}
 </script>

@@ -3,7 +3,7 @@
   "loginUrl": "auth/?clientApp={clientApp}",
   "api": {
     "development": "https://localhost:7181",
-    "_development": "https://pim-demo.regira.com/manager-api",
+    "_development": "https://pim.regira.com/manager-api",
     "production": "https://pim.regira.com/manager-api"
   },
   "includeCredentials": false,

@@ -1,0 +1,14 @@
+// ---------------------------------------------------------------------------
+// PIM-Manager theme — the app's single styling entry point.
+// Loaded in main.ts AFTER bootstrap + regira_modules/style.css so these win.
+// Override the library's --rg-* tokens and Bootstrap component vars here; never
+// fork the library css. See regira_modules.vue.ui → ui.customize (the 5-layer ladder).
+// ---------------------------------------------------------------------------
+:root {
+    // PIM accent — the app's existing "info" cyan highlight, promoted to a token.
+    --rg-accent: #0dcaf0;
+    // .rg-accent-bg — the "normal" modal header + form-section / feedback tint.
+    --rg-accent-bg: rgba(13, 202, 240, 0.25);
+    // .is-deleted — pending-delete chips/rows (InputSelectorInline & owned lists).
+    --rg-deleted-bg: rgba(220, 53, 69, 0.25);
+}

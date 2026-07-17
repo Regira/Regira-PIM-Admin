@@ -38,10 +38,6 @@ import { Entity as RelationshipType } from "@/entities/party-relationship-types"
 import App from "@/App.vue"
 import PimModal from "@/components/layout/PimModal.vue"
 
-// date serialization to JSON (without timezone)
-import dateSerializer from "regira_modules/extensions/date-extensions"
-dateSerializer.use()
-
 // opt in to app-wide component registration (Icon, IconButton, Loading*, Paging, MyModal, Debug)
 // — must be set before the plugins install
 configureGlobals({ registerComponentsGlobally: true })
@@ -50,6 +46,7 @@ configureGlobals({ registerComponentsGlobally: true })
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "regira_modules/style.css"
+import "./assets/theme.scss" // app theme — overrides library --rg-* tokens; must come after style.css
 import "./assets/base.scss"
 import "./assets/main.scss"
 import loadingImg from "@/assets/images/loading.gif"
@@ -101,7 +98,7 @@ fetch(`${appConfig.baseUrl}/config.json?v=${formatDateTime(new Date(), "yyyyMMdd
         app.use(isOnlinePlugin)
         app.use(loadingPlugin, { img: loadingImg })
         app.use(pagingPlugin)
-        app.use(modalPlugin, { DefaultModal: PimModal })
+        app.use(modalPlugin, { Modal: PimModal })
         app.use(feedbackPlugin, { autoHideDelay: 2500 })
 
         // global components not covered by the plugins (use explicit naming -> functions are renamed when minimized in build)

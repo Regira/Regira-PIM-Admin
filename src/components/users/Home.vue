@@ -44,7 +44,7 @@
             @close="showChangePassword = false"
             @cancel="showChangePassword = false"
         >
-            <ChangePasswordForm :username="$auth.authData?.name ?? ''" />
+            <ChangePasswordForm @success="showChangePassword = false" />
         </MyModal>
         <MyModal
             :is-visible="showChangePersonalData"
@@ -61,7 +61,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { useAuthStore } from "regira_modules/vue/auth"
-import ChangePasswordForm from "./ChangePasswordForm.vue"
+import { ChangePasswordForm } from "regira_modules/vue/auth"
 import ChangePersonalData from "./ChangePersonalData.vue"
 
 const showChangePassword = ref(false)

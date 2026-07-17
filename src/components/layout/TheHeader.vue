@@ -26,7 +26,7 @@
                         <AccountMenu :isAuthenticated="$auth.isAuthenticated" @close="handleCloseMenu" />
                     </div>
                     <div class="col-auto pt-2">
-                        <LangSelector class="float-end" />
+                        <LangSelector class="float-end" :langs="['en', 'fr', 'nl']" />
                     </div>
                 </div>
             </form>
@@ -40,7 +40,7 @@ import { useConfig } from "@/app-config"
 import logo from "@/assets/images/logo-sm.png"
 import { NavBar } from "@/components/entity-navigation"
 import AccountMenu from "@/components/users/HeaderMenu.vue"
-import LangSelector from "./LangSelector.vue"
+import { LangSelector } from "regira_modules/vue/lang"
 
 const { version } = useConfig()
 
