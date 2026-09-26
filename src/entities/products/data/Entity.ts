@@ -15,6 +15,8 @@ export class Product extends EntityBase {
     created?: Date
     lastModified?: Date
     isArchived: boolean = false
+    // sent back on save: the API answers 409 when someone else saved in between
+    concurrencyToken?: string
 
     unitType?: UnitType
     assemblies?: ProductComponent[]

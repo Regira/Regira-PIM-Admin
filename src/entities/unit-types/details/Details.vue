@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { RouterView, useRouter } from "vue-router"
-import { useAuthStore } from "regira_modules/vue/auth"
+import { onAuthenticated } from "regira_modules/vue/auth"
 import { Feedback } from "regira_modules/vue/ui"
 import { useDetails } from "regira_modules/vue/entities/details"
 import { FormStates } from "regira_modules/vue/entities/form"
@@ -30,9 +30,8 @@ const { service } = useEntityStore()
 
 const { item, isLoading, overviewUrl, load, feedback } = useDetails(service)
 
-// trigger load when logging in (only load when item has not been loaded before)
-const authStore = useAuthStore()
-authStore.$onAction(({ name, after }) => name == "login" && after(() => item.value == null && authStore.isAuthenticated && load()))
+// (re)load once a token is present: sign-in, refresh, or a stored token restored on reload
+onAuthenticated(() => item.value == null && load(), { immediate: false })
 
 const router = useRouter()
 function handleRemove() {
