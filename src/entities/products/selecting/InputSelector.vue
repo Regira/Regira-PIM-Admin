@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, type Ref } from "vue"
+import { computed, watch, type Ref } from "vue"
 import config from "../config/config"
 import Entity from "../data/Entity"
 import useEntityStore from "../data/store"
@@ -88,10 +88,26 @@ function handleSelect(selected?: Entity) {
     }
 }
 
-onMounted(async () => {
-    if (props.idValue && !props.modelValue?.id) {
-        const model = await list({ id: props.idValue })
-        emit("update:modelValue", model[0])
-    }
-})
+// Two v-models: `idValue` is the FK that gets saved (or filtered on), `modelValue` is the entity that gets displayed.
+// Keep the entity in step with the FK whenever it changes — at setup, and again when the parent assigns or clears it
+// later (a filter reset, a restored query string), which would otherwise leave a stale row on screen.
+watch(
+    () => props.idValue,
+    async (id, previous) => {
+        if (!id) {
+            // cleared by the parent — only a real change: bound without `idValue`, it never moves
+            if (previous && props.modelValue) emit("update:modelValue", undefined)
+            return
+        }
+        if (props.modelValue?.id == id) return
+        let model
+        try {
+            model = await list({ id })
+        } catch {
+            return // a caller who may not read this entity (403) keeps the FK and shows no row
+        }
+        if (props.idValue == id) emit("update:modelValue", model[0]) // a newer FK arrived meanwhile: drop this answer
+    },
+    { immediate: true }
+)
 </script>

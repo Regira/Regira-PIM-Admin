@@ -473,5 +473,10 @@
         "en": "Welcome {name}",
         "fr": "Bienvenue {name}",
         "nl": "Welkom {name}"
+    },
+    "advancedSearch": {
+        "en": "Advanced search",
+        "fr": "Recherche avancée",
+        "nl": "Geavanceerd zoeken"
     }
 }
