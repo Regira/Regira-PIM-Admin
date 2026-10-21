@@ -27,9 +27,7 @@ const config: IConfig = {
     api,
     detailsUrl: api,
     listUrl: api,
-    get searchUrl() {
-        return this.isComplex ? api + "/search" : api
-    },
+    searchUrl: api + "/search", // counted search: rows plus the total the overview pages with
     saveUrl: api,
     deleteUrl: api,
 }
