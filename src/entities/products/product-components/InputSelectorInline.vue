@@ -2,10 +2,7 @@
     <InputSelectorInline v-model="items" :row-key="(r) => r.componentId" :exclude-key="(r) => r.componentId">
         <template #chip="{ row }"> <FormModalButton :modelValue="row.component" /> {{ row.component?.title ?? "" }} </template>
         <template #selector="{ add, exclude }">
-            <InputSelector
-                :filter-defaults="{ exclude }"
-                @select="(p?: Product) => p && add(ProductComponent.create({ assemblyId: product.id, componentId: p.id, component: p }))"
-            />
+            <InputSelector :filter-defaults="{ exclude }" @select="(p?: Product) => p && add(linkTo(p))" />
         </template>
     </InputSelectorInline>
 </template>
@@ -19,4 +16,8 @@ import FormModalButton from "../details/FormModalButton.vue"
 
 const { product } = defineProps<{ product: Product }>()
 const items = defineModel<ProductComponent[]>({ default: () => [] })
+
+function linkTo(p: Product) {
+    return ProductComponent.create({ assemblyId: product.id, componentId: p.id, component: p })
+}
 </script>
