@@ -10,7 +10,7 @@
                 </template>
                 <template v-else>
                     <!-- Simple enitty: Open form modal -->
-                    <FormModalButton v-model="item" @save="$emit('save', $event)" />
+                    <FormModalButton v-model="item" @save="$emit('save', $event)" @remove="$emit('remove', $event)" />
                 </template>
             </div>
             <div class="col text-truncate">
