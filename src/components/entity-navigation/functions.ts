@@ -11,7 +11,7 @@ export function useNavigation() {
 
     const configs = Object.entries(app.appContext.config.globalProperties.$configs).map(([, config]) => config as IConfig)
 
-    function hasAccess(config: IConfig): boolean {
+    function hasAccess(): boolean {
         return true
     }
 

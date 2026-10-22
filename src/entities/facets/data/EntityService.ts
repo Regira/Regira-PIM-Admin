@@ -20,7 +20,7 @@ export class EntityService extends EntityServiceBase<Entity> {
         return item instanceof Entity ? item : Object.assign(this.createInstance(Entity as new () => Entity), item || {})
     }
 
-    async getFamily(ids?: Array<number> | number, groupIds?: Array<number> | number, level?: number): Promise<Array<FamilyItem>> {
+    async getFamily(ids?: Array<number> | number, groupIds?: Array<number> | number): Promise<Array<FamilyItem>> {
         const queryString = (Array.isArray(ids) ? ids : [ids])
             .map((id) => `ids=${id}`)
             .concat(groupIds ? (Array.isArray(groupIds) ? groupIds : [groupIds]).map((id) => `groupIds=${id}`) : [])

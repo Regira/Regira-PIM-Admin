@@ -40,7 +40,7 @@ import ActionButton from "./ActionButton.vue"
 import { getDataType } from "./functions"
 import { useLang, type ITranslationMessage } from "regira_modules/vue/lang"
 
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

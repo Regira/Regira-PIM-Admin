@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { type Entity as Party, FormModalButton, InputSelector, useEntityStore, formatCity } from "@/entities/parties"
+import { type Entity as Party, InputSelector, useEntityStore, formatCity } from "@/entities/parties"
 import type Product from "../data/Entity"
 import ProductSupplier from "./Entity"
 

@@ -27,7 +27,7 @@ import type Entity from "./Entity"
 import FormModalButton from "./FormModalButton.vue"
 import AddressButton from "./AddressButton.vue"
 
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

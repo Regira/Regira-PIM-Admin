@@ -25,7 +25,7 @@ import { getDataType } from "./functions"
 import FormModalButton from "./FormModalButton.vue"
 import ActionButton from "./ActionButton.vue"
 
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

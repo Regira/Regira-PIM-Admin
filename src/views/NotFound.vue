@@ -9,6 +9,6 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 defineProps({ url: { type: String, default: "/" } })
 </script>

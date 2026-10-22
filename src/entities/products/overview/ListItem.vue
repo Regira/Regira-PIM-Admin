@@ -40,22 +40,21 @@
 
 <script setup lang="ts">
 import { ModalType, ConfirmButton } from "regira_modules/vue/ui"
-import { formatCurrency } from "regira_modules/vue/formatters"
 import { type SaveResult } from "regira_modules/vue/entities"
 import { useEntityStore as useUnitTypeStore, FormModalButton as UnitTypeButton } from "@/entities/unit-types"
-import { useEntityStore as useFacetStore, FormModalButton as FacetButton } from "@/entities/facets"
+import { useEntityStore as useFacetStore } from "@/entities/facets"
 import config from "../config/config"
 import Entity from "../data/Entity"
 import useEntityStore from "../data/store"
 import FormModalButton from "../details/FormModalButton.vue"
 
-const emit = defineEmits<{
+defineEmits<{
     (e: "save", args: SaveResult<Entity>): void
     (e: "remove", item: Entity): void
     (e: "request-save", item: Entity): void
     (e: "request-remove", item: Entity): void
 }>()
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

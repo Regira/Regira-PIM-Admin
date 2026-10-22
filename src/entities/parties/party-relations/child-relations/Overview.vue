@@ -42,7 +42,7 @@ import RelationshipTypeSelector from "@/entities/party-relationship-types/select
 import PartyInputSelector from "../../selecting/InputSelector.vue"
 import List from "./List.vue"
 
-const emit = defineEmits<{
+defineEmits<{
     (e: "sort", args: any): void
 }>()
 const props = defineProps<{

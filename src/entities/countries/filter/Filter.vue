@@ -17,7 +17,7 @@ const emit = defineEmits<
     }
 >()
 
-const props = defineProps<{
+defineProps<{
     modalTitle?: string
     resultCount?: number
 }>()

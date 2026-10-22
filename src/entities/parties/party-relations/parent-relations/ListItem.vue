@@ -50,7 +50,7 @@ import type Entity from "../Entity"
 import PartyButton from "../../details/FormModalButton.vue"
 import FormModalButton from "./FormModalButton.vue"
 
-const props = defineProps<{
+defineProps<{
     child: Party
 }>()
 

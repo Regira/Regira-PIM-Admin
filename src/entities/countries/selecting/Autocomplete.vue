@@ -7,7 +7,7 @@
         :placeholder="placeholder"
         ref="autoEl"
     >
-        <template #default="{ item, q }">
+        <template #default="{ item }">
             <div class="w-100 d-flex justify-content-between">
                 <div>{{ item?.$title }}</div>
                 <div>{{ item?.code }}</div>

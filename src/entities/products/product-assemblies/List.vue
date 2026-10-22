@@ -12,7 +12,7 @@
                 </button>
             </div>
         </div>
-        <template v-for="(item, i) in items" :key="item.$id">
+        <template v-for="item in items" :key="item.$id">
             <div class="row border-bottom border-bottom-1 py-2">
                 <div class="col-auto">
                     <FormModalButton :modelValue="item" />

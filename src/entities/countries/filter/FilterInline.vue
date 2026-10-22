@@ -31,7 +31,7 @@ const emit = defineEmits<
     }
 >()
 
-const props = defineProps<{
+defineProps<{
     resultCount?: number
 }>()
 const searchObject = defineModel<SearchObject>({

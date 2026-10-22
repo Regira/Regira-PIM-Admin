@@ -96,7 +96,7 @@ const emit = defineEmits<
     }
 >()
 
-const props = defineProps<{
+defineProps<{
     resultCount?: number
 }>()
 

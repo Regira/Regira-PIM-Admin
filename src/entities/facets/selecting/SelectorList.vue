@@ -9,7 +9,7 @@
             <div class="col d-none d-md-block fw-bold">{{ $t("facetGroups") }}</div>
         </div>
 
-        <template v-for="(item, i) in items" :key="item.$id">
+        <template v-for="item in items" :key="item.$id">
             <div class="row border-bottom border-bottom-1 py-2" :class="{ 'is-selected': isSelected(item) }">
                 <div class="col-auto">
                     <IconButton :icon="isSelected(item) ? 'selected' : 'select'" class="btn-default py-0 px-1" @click="handleSelect(item)" />

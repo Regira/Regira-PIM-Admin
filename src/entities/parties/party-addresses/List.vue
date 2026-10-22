@@ -13,7 +13,7 @@ import Draggable from "vuedraggable"
 import type Entity from "./Entity"
 import ListItem from "./ListItem.vue"
 
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

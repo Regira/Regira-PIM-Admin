@@ -15,7 +15,7 @@ export function addIcons(icons: IIconProvider) {
 }
 
 export default {
-    install(app: App<Element>, { routes }: { routes?: Array<any> }) {
+    install(app: App<Element>) {
         addServices(app.config.globalProperties.$services)
         addIcons(app.config.globalProperties.$icons)
         app.config.globalProperties.$configs[Entity.name] = config
