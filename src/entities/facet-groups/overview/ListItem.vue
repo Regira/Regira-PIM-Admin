@@ -9,7 +9,7 @@
             </template>
             <template v-else>
                 <!-- Simple entity: Open form modal -->
-                <FormModalButton v-model="item" @save="$emit('save', $event)" />
+                <FormModalButton v-model="item" @save="$emit('save', $event)" @remove="$emit('remove', $event)" />
             </template>
         </div>
         <div class="col-3 col-md-2 text-truncate">
@@ -33,14 +33,14 @@ import config from "../config/config"
 import Entity from "../data/Entity"
 import FormModalButton from "../details/FormModalButton.vue"
 
-const emit = defineEmits<{
+defineEmits<{
     (e: "update:modelValue", args: Entity): void
     (e: "save", args: SaveResult<Entity>): void
     (e: "remove", args: Entity): void
     (e: "request-save", args: Entity): void
     (e: "request-remove", args: Entity): void
 }>()
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

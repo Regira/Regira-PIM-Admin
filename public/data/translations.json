@@ -1,164 +1,4 @@
 {
-    "auth.changePassword": {
-        "en": "Change password",
-        "fr": "Changer de mot de passe",
-        "nl": "Wachtwoord aanpassen"
-    },
-    "auth.changePasswordFailed": {
-        "en": "Changing password failed",
-        "fr": "Échec modif. mot de passe",
-        "nl": "Wachtwoord aanpassen is mislukt"
-    },
-    "auth.passwordChanged": {
-        "en": "Password is changed",
-        "fr": "Mot de passe a été modifié",
-        "nl": "Wachtwoord is aangepast"
-    },
-    "auth.currentPassword": {
-        "en": "current password",
-        "fr": "mot de passe actuel",
-        "nl": "huidig wachtwoord"
-    },
-    "auth.demoInfoMessage": {
-        "en": "In the demo-version you can select a user or fill in the credentials manually",
-        "fr": "Dans la version de démonstration, vous pouvez sélectionner un utilisateur ou remplir les informations d'identification manuellement",
-        "nl": "In de demo-versie kun je een gebruiker selecteren of de inloggegevens handmatig invullen"
-    },
-    "auth.fillInUsernameMsg": {
-        "en": "Fill in username to request a password reset.",
-        "fr": "Saisissez votre nom d'utilisateur pour demander une réinitialisation de votre mot de passe.",
-        "nl": "Vul je gebruikersnaam in om je wachtwoord opnieuw in te stellen"
-    },
-    "auth.forgotPassword": {
-        "en": "Forgot password?",
-        "fr": "Mot de passe oublié ?",
-        "nl": "Wachtwoord vergeten?"
-    },
-    "auth.myAccount": {
-        "en": "My Account",
-        "fr": "Mon compte",
-        "nl": "Mijn account"
-    },
-    "auth.newPassword": {
-        "en": "new password",
-        "fr": "nouveau mot de passe",
-        "nl": "nieuw wachtwoord"
-    },
-    "auth.password": {
-        "en": "Password",
-        "fr": "Mot de passe",
-        "nl": "Wachtwoord"
-    },
-    "auth.passwordResetReceivedMsg": {
-        "en": "Password reset request received. Please check your email.",
-        "fr": "Demande de réinitialisation du mot de passe reçue. Veuillez vérifier votre e-mail.",
-        "nl": "Je aanvraag is ontvangen, gelieve je e-mail te controleren."
-    },
-    "auth.passwordResetSent": {
-        "en": "Reset request sent",
-        "fr": "Demande de réinitialisation envoyée",
-        "nl": "Je aanvraag is verstuurd"
-    },
-    "auth.passwordResetFailed": {
-        "en": "Reset request failed",
-        "fr": "Échec de la demande de réinitialisation",
-        "nl": "Je aanvraag is mislukt"
-    },
-    "auth.passwordsMustMatch": {
-        "en": "Passwords must match.",
-        "fr": "Les mots de passe doivent correspondre.",
-        "nl": "Wachtwoorden komen niet overeen"
-    },
-    "auth.repeatPassword": {
-        "en": "repeat password",
-        "fr": "répéter le mot de passe",
-        "nl": "herhaal wachtwoord"
-    },
-    "auth.signIn": {
-        "en": "Sign in",
-        "fr": "Se connecter",
-        "nl": "Aanmelden"
-    },
-    "auth.signOut": {
-        "en": "Sign out",
-        "fr": "Se déconnecter",
-        "nl": "Afmelden"
-    },
-    "auth.signingIn": {
-        "en": "Signing in ...",
-        "fr": "Connexion en cours...",
-        "nl": "Aan het aanmelden ..."
-    },
-    "auth.signInInfo": {
-        "en": "Fill in username & password to sign in",
-        "fr": "Saisissez votre nom d'utilisateur et votre mot de passe pour vous connecter.",
-        "nl": "Vul je gebruikersnaam & wachtwoord in"
-    },
-    "auth.signInErrorMsg": {
-        "en": "Unfortunately, signing in failed.",
-        "fr": "Malheureusement, la connexion a échoué.",
-        "nl": "Helaas, het aanmelden is mislukt."
-    },
-    "auth.tryAgainInMin": {
-        "en": "Try again in {minutes} min.",
-        "fr": "Réessayez dans {minutes} min.",
-        "nl": "Probeer opnieuw in {minutes} min."
-    },
-    "auth.username": {
-        "en": "Username",
-        "fr": "Identifiant",
-        "nl": "Gebruikersnaam"
-    },
-    "auth.personalData": {
-        "en": "Personal data",
-        "fr": "Données personelles",
-        "nl": "Persoonlijke gegevens"
-    },
-    "auth.personalDataChanged": {
-        "en": "Your data has been updated",
-        "fr": "Vos données ont été mises à jour",
-        "nl": "Je gegevens werden aangepast"
-    },
-    "auth.givenName": {
-        "en": "Given name",
-        "fr": "Prénom",
-        "nl": "Voornaam"
-    },
-    "auth.lastName": {
-        "en": "Last name",
-        "fr": "Nom de famille",
-        "nl": "Achternaam"
-    },
-    "auth.culture": {
-        "en": "Language",
-        "fr": "Langue",
-        "nl": "Voorkeurstaal"
-    },
-    "claims.canRead": {
-        "en": "Read",
-        "fr": "Lire",
-        "nl": "Lezen"
-    },
-    "claims.canWrite": {
-        "en": "Write",
-        "fr": "Ecrire",
-        "nl": "Schrijven"
-    },
-    "claims.admin": {
-        "en": "Admin",
-        "fr": "Admin",
-        "nl": "Beheerder"
-    },
-    "common.all": {
-        "en": "All",
-        "fr": "Tout",
-        "nl": "Alles"
-    },
-    "common.allTypes": {
-        "en": "All types",
-        "fr": "Tous les types",
-        "nl": "Alle types"
-    },
     "addContactData": {
         "en": "add new phone, email, website",
         "fr": "ajouter un nouveau téléphone, e-mail, site web",
@@ -189,10 +29,160 @@
         "fr": "Adresse",
         "nl": "Adres"
     },
+    "auth.changePassword": {
+        "en": "Change password",
+        "fr": "Changer de mot de passe",
+        "nl": "Wachtwoord aanpassen"
+    },
+    "auth.changePasswordFailed": {
+        "en": "Changing password failed",
+        "fr": "Échec modif. mot de passe",
+        "nl": "Wachtwoord aanpassen is mislukt"
+    },
+    "auth.culture": {
+        "en": "Language",
+        "fr": "Langue",
+        "nl": "Voorkeurstaal"
+    },
+    "auth.currentPassword": {
+        "en": "current password",
+        "fr": "mot de passe actuel",
+        "nl": "huidig wachtwoord"
+    },
+    "auth.demoInfoMessage": {
+        "en": "In the demo-version you can select a user or fill in the credentials manually",
+        "fr": "Dans la version de démonstration, vous pouvez sélectionner un utilisateur ou remplir les informations d'identification manuellement",
+        "nl": "In de demo-versie kun je een gebruiker selecteren of de inloggegevens handmatig invullen"
+    },
+    "auth.fillInUsernameMsg": {
+        "en": "Fill in username to request a password reset.",
+        "fr": "Saisissez votre nom d'utilisateur pour demander une réinitialisation de votre mot de passe.",
+        "nl": "Vul je gebruikersnaam in om je wachtwoord opnieuw in te stellen"
+    },
+    "auth.forgotPassword": {
+        "en": "Forgot password?",
+        "fr": "Mot de passe oublié ?",
+        "nl": "Wachtwoord vergeten?"
+    },
+    "auth.givenName": {
+        "en": "Given name",
+        "fr": "Prénom",
+        "nl": "Voornaam"
+    },
+    "auth.lastName": {
+        "en": "Last name",
+        "fr": "Nom de famille",
+        "nl": "Achternaam"
+    },
+    "auth.myAccount": {
+        "en": "My Account",
+        "fr": "Mon compte",
+        "nl": "Mijn account"
+    },
+    "auth.newPassword": {
+        "en": "new password",
+        "fr": "nouveau mot de passe",
+        "nl": "nieuw wachtwoord"
+    },
+    "auth.password": {
+        "en": "Password",
+        "fr": "Mot de passe",
+        "nl": "Wachtwoord"
+    },
+    "auth.passwordChanged": {
+        "en": "Password is changed",
+        "fr": "Mot de passe a été modifié",
+        "nl": "Wachtwoord is aangepast"
+    },
+    "auth.passwordResetFailed": {
+        "en": "Reset request failed",
+        "fr": "Échec de la demande de réinitialisation",
+        "nl": "Je aanvraag is mislukt"
+    },
+    "auth.passwordResetReceivedMsg": {
+        "en": "Password reset request received. Please check your email.",
+        "fr": "Demande de réinitialisation du mot de passe reçue. Veuillez vérifier votre e-mail.",
+        "nl": "Je aanvraag is ontvangen, gelieve je e-mail te controleren."
+    },
+    "auth.passwordResetSent": {
+        "en": "Reset request sent",
+        "fr": "Demande de réinitialisation envoyée",
+        "nl": "Je aanvraag is verstuurd"
+    },
+    "auth.passwordsMustMatch": {
+        "en": "Passwords must match.",
+        "fr": "Les mots de passe doivent correspondre.",
+        "nl": "Wachtwoorden komen niet overeen"
+    },
+    "auth.personalData": {
+        "en": "Personal data",
+        "fr": "Données personelles",
+        "nl": "Persoonlijke gegevens"
+    },
+    "auth.personalDataChanged": {
+        "en": "Your data has been updated",
+        "fr": "Vos données ont été mises à jour",
+        "nl": "Je gegevens werden aangepast"
+    },
+    "auth.repeatPassword": {
+        "en": "repeat password",
+        "fr": "répéter le mot de passe",
+        "nl": "herhaal wachtwoord"
+    },
+    "auth.signIn": {
+        "en": "Sign in",
+        "fr": "Se connecter",
+        "nl": "Aanmelden"
+    },
+    "auth.signInErrorMsg": {
+        "en": "Unfortunately, signing in failed.",
+        "fr": "Malheureusement, la connexion a échoué.",
+        "nl": "Helaas, het aanmelden is mislukt."
+    },
+    "auth.signingIn": {
+        "en": "Signing in ...",
+        "fr": "Connexion en cours...",
+        "nl": "Aan het aanmelden ..."
+    },
+    "auth.signInInfo": {
+        "en": "Fill in username & password to sign in",
+        "fr": "Saisissez votre nom d'utilisateur et votre mot de passe pour vous connecter.",
+        "nl": "Vul je gebruikersnaam & wachtwoord in"
+    },
+    "auth.signOut": {
+        "en": "Sign out",
+        "fr": "Se déconnecter",
+        "nl": "Afmelden"
+    },
+    "auth.tryAgainInMin": {
+        "en": "Try again in {minutes} min.",
+        "fr": "Réessayez dans {minutes} min.",
+        "nl": "Probeer opnieuw in {minutes} min."
+    },
+    "auth.username": {
+        "en": "Username",
+        "fr": "Identifiant",
+        "nl": "Gebruikersnaam"
+    },
     "cancel": {
         "en": "Cancel",
         "fr": "Annuler",
         "nl": "Toch niet"
+    },
+    "claims.admin": {
+        "en": "Admin",
+        "fr": "Admin",
+        "nl": "Beheerder"
+    },
+    "claims.canRead": {
+        "en": "Read",
+        "fr": "Lire",
+        "nl": "Lezen"
+    },
+    "claims.canWrite": {
+        "en": "Write",
+        "fr": "Ecrire",
+        "nl": "Schrijven"
     },
     "code": {
         "en": "Code",
@@ -203,6 +193,16 @@
         "en": "code or abbr.",
         "fr": "code ou abrév.",
         "nl": "code of afkorting"
+    },
+    "common.all": {
+        "en": "All",
+        "fr": "Tout",
+        "nl": "Alles"
+    },
+    "common.allTypes": {
+        "en": "All types",
+        "fr": "Tous les types",
+        "nl": "Alle types"
     },
     "companyTitle": {
         "en": "Company title",
@@ -224,20 +224,35 @@
         "fr": "Coordonnées",
         "nl": "Contactgegevens"
     },
-    "country": {
-        "en": "Country",
-        "fr": "Pays",
-        "nl": "Land"
+    "contactData.invalidEmail": {
+        "en": "{value} is not a valid email address",
+        "fr": "{value} n'est pas une adresse e-mail valide",
+        "nl": "{value} is geen geldig e-mailadres"
+    },
+    "contactData.invalidPhone": {
+        "en": "{value} is not a valid phone number",
+        "fr": "{value} n'est pas un numéro de téléphone valide",
+        "nl": "{value} is geen geldig telefoonnummer"
     },
     "countries": {
         "en": "Countries",
         "fr": "Pays",
         "nl": "Landen"
     },
+    "country": {
+        "en": "Country",
+        "fr": "Pays",
+        "nl": "Land"
+    },
     "date": {
         "en": "Date",
         "fr": "Date",
         "nl": "Datum"
+    },
+    "dates.endBeforeStart": {
+        "en": "The end date cannot be before the start date",
+        "fr": "La date de fin ne peut pas précéder la date de début",
+        "nl": "De einddatum kan niet vóór de begindatum liggen"
     },
     "delete": {
         "en": "Delete",
@@ -259,6 +274,11 @@
         "fr": "Extra",
         "nl": "Extra"
     },
+    "facet.hierarchyCycle": {
+        "en": "Linking {title} here would make the hierarchy loop back on itself",
+        "fr": "Lier {title} ici ferait boucler la hiérarchie sur elle-même",
+        "nl": "Als u {title} hier koppelt, loopt de hiërarchie in een kring rond"
+    },
     "files": {
         "en": "Files",
         "fr": "Fichiers",
@@ -279,15 +299,15 @@
         "fr": "Mot(s)-clé",
         "nl": "Zoekwoord(en)"
     },
-    "labels": {
-        "en": "Labels",
-        "fr": "Étiquettes",
-        "nl": "Labels"
-    },
     "labelName": {
         "en": "Label name",
         "fr": "Type",
         "nl": "Label type"
+    },
+    "labels": {
+        "en": "Labels",
+        "fr": "Étiquettes",
+        "nl": "Labels"
     },
     "labelValue": {
         "en": "Label",
@@ -329,6 +349,16 @@
         "fr": "Liste",
         "nl": "Overzicht"
     },
+    "party.relationshipCycle": {
+        "en": "Linking {name} here would make the relationships loop back on themselves",
+        "fr": "Lier {name} ici ferait boucler les relations sur elles-mêmes",
+        "nl": "Als u {name} hier koppelt, lopen de relaties in een kring rond"
+    },
+    "party.relationshipSelf": {
+        "en": "A party cannot be related to itself",
+        "fr": "Une partie ne peut pas être liée à elle-même",
+        "nl": "Een partij kan geen relatie met zichzelf hebben"
+    },
     "perMonth": {
         "en": "per month",
         "fr": "par mois",
@@ -353,6 +383,21 @@
         "en": "Price (incl.)",
         "fr": "Prix (TTC)",
         "nl": "Prijs (incl.)"
+    },
+    "product.componentCycle": {
+        "en": "Adding {component} as a component would make this product contain itself",
+        "fr": "Ajouter {component} comme composant ferait que ce produit se contienne lui-même",
+        "nl": "{component} als onderdeel toevoegen zou betekenen dat dit product zichzelf bevat"
+    },
+    "product.componentQuantity": {
+        "en": "Every component needs a quantity greater than zero",
+        "fr": "Chaque composant doit avoir une quantité supérieure à zéro",
+        "nl": "Elk onderdeel heeft een hoeveelheid groter dan nul nodig"
+    },
+    "relationshipType.inUse": {
+        "en": "This relationship type is used by {count} relationship(s) and cannot be deleted",
+        "fr": "Ce type de relation est utilisé par {count} relation(s) et ne peut pas être supprimé",
+        "nl": "Dit relatietype wordt door {count} relatie(s) gebruikt en kan niet verwijderd worden"
     },
     "removeItem?": {
         "en": "Remove item?",
@@ -409,6 +454,16 @@
         "fr": "L'arbre est inversé",
         "nl": "Boom is omgekeerd"
     },
+    "unitType.codeTaken": {
+        "en": "The code {code} is already used by another unit type",
+        "fr": "Le code {code} est déjà utilisé par un autre type d'unité",
+        "nl": "De code {code} wordt al door een ander eenheidstype gebruikt"
+    },
+    "unitType.inUse": {
+        "en": "This unit type is used by {count} product(s) and cannot be deleted",
+        "fr": "Ce type d'unité est utilisé par {count} produit(s) et ne peut pas être supprimé",
+        "nl": "Dit eenheidstype wordt door {count} product(en) gebruikt en kan niet verwijderd worden"
+    },
     "usernameLabel": {
         "en": "Username/Email",
         "fr": "Nom d'utilisateur, Addresse é-mail",
@@ -418,5 +473,10 @@
         "en": "Welcome {name}",
         "fr": "Bienvenue {name}",
         "nl": "Welkom {name}"
+    },
+    "advancedSearch": {
+        "en": "Advanced search",
+        "fr": "Recherche avancée",
+        "nl": "Geavanceerd zoeken"
     }
 }

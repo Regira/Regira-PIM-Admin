@@ -22,7 +22,7 @@ import type Party from "../../data/Entity"
 import type Entity from "../Entity"
 import ListItem from "./ListItem.vue"
 
-const props = defineProps<{
+defineProps<{
     child: Party
 }>()
 

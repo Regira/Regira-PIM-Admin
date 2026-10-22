@@ -8,7 +8,7 @@ export class CountryService extends JSONService<Country> {
         super(useAxios(), config, Country.name)
     }
 
-    override toEntity(item: Object): Country {
+    override toEntity(item: object): Country {
         return Object.assign(this.createInstance(Country), item)
     }
 }

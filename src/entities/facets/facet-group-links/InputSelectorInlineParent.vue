@@ -9,7 +9,7 @@
         <template #selector="{ add, exclude }">
             <InputSelector
                 :filter-defaults="{ ...filterDefaults, exclude: [...new Set([...exclude, ...(filterDefaults?.exclude ?? [])])] }"
-                @select="(g?: FacetGroup) => g && add(FacetFacetGroup.create({ facetId: facet.id, facetGroupId: g.id, facetGroup: g }))"
+                @select="(g?: FacetGroup) => g && add(linkTo(g))"
             />
         </template>
     </InputSelectorInline>
@@ -25,6 +25,10 @@ import { InputSelectorInline } from "regira_modules/vue/entities/form"
 
 const props = defineProps<{ filterDefaults?: Record<string, any> }>()
 const facet = defineModel<Facet>({ required: true })
+
+function linkTo(g: FacetGroup) {
+    return FacetFacetGroup.create({ facetId: facet.value.id, facetGroupId: g.id, facetGroup: g })
+}
 
 // Preserve the cycle-guard: a soft-deleted link whose target is in the exclude set stays deleted.
 function handleRemove(row: FacetFacetGroup) {

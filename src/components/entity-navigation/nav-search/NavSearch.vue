@@ -28,7 +28,7 @@ function handleSearch() {
     if (searchItemConfig.value == null) {
         return
     }
-    var searchEntityRoute: RouteLocationRaw = {
+    const searchEntityRoute: RouteLocationRaw = {
         name: `${searchItemConfig.value.key}Overview`,
         query: { q: q.value },
     }

@@ -26,7 +26,7 @@ import Party from "../data/Entity"
 import OverviewParentParties from "./parent-relations/Overview.vue"
 import OverviewChildParties from "./child-relations/Overview.vue"
 
-const emit = defineEmits<{
+defineEmits<{
     (e: "update:modelValue", args: Party): void
 }>()
 

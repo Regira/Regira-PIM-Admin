@@ -27,7 +27,7 @@
         </div>
         <div class="col d-none d-lg-block text-truncate">
             <template v-if="item.contactData?.length">
-                <div v-for="cd in getContactData(item)" class="mb-1 text-nowrap">
+                <div v-for="cd in getContactData(item)" :key="cd.dataType" class="mb-1 text-nowrap">
                     <ActionButton :item="cd" class="p-1" :title="cd.value" />
                     {{ cd.value }}
                 </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-auto col-sm-2 d-lg-none">
             <div class="d-inline-block" v-if="item.contactData?.length">
-                <template v-for="cd in getContactData(item)">
+                <template v-for="cd in getContactData(item)" :key="cd.dataType">
                     <ActionButton :item="cd" class="px-2" />
                 </template>
             </div>
@@ -59,14 +59,14 @@ import config from "../config/config"
 import Entity from "../data/Entity"
 import PartyIcon from "../details/PartyIcon.vue"
 
-const emit = defineEmits<{
+defineEmits<{
     (e: "update:modelValue", args: Entity): void
     (e: "save", args: SaveResult<Entity>): void
     (e: "remove", args: Entity): void
     (e: "request-save", args: Entity): void
     (e: "request-remove", args: Entity): void
 }>()
-const props = defineProps<{
+defineProps<{
     readonly?: boolean
 }>()
 

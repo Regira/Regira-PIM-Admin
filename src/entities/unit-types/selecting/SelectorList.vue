@@ -8,7 +8,7 @@
             <div class="col fw-bold">{{ $t("name") }}</div>
         </div>
 
-        <template v-for="(item, i) in items" :key="item.$id">
+        <template v-for="item in items" :key="item.$id">
             <div class="row border-bottom border-bottom-1 py-2" :class="{ 'is-selected': isSelected(item) }">
                 <div class="col-auto">
                     <IconButton :icon="isSelected(item) ? 'selected' : 'select'" class="btn-default py-0 px-1" @click="handleSelect(item)" />
@@ -28,7 +28,6 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import type { OverviewEmits } from "regira_modules/vue/entities"
-import config from "../config/config"
 import type Entity from "../data/Entity"
 import useEntityStore from "../data/store"
 import FormModalButton from "../details/FormModalButton.vue"

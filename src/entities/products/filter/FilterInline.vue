@@ -26,7 +26,7 @@ const emit = defineEmits<
     }
 >()
 
-const props = withDefaults(
+withDefaults(
     defineProps<{
         resultCount?: number
         showToggleAdv?: boolean

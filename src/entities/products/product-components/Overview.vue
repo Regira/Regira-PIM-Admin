@@ -6,7 +6,12 @@
             </div>
             <div class="col-4">
                 <div class="input-group">
-                    <input type="number" v-model="newItem.quantity" class="form-control" />
+                    <input
+                        type="number"
+                        v-model="newItem.quantity"
+                        class="form-control"
+                        @keydown.enter.prevent="newItem.component && handleAdd(newItem)"
+                    />
                     <div class="input-group-text">
                         <span class="text-muted">{{ getUnitType(newItem.component?.unitType)?.code }}</span>
                     </div>

@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { ref } from "vue"
 import type Product from "../data/Entity"
 import ProductFacet from "./Entity"
 import InputSelector from "@/entities/facets/selecting/InputSelector.vue"

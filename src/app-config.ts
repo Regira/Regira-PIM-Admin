@@ -1,6 +1,5 @@
 import { trimRight } from "regira_modules/utilities/string-utility"
 declare global {
-    // eslint-disable-next-line no-var
     var __APP_VERSION__: string
 }
 const { BASE_URL, MODE } = import.meta.env

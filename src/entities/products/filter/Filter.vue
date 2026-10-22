@@ -7,10 +7,11 @@
         <Teleport to="#modals">
             <MyModal
                 :is-visible="showAdv"
-                :title="props.modalTitle || 'Advanced search'"
+                :title="props.modalTitle || $t('advancedSearch')"
                 :show-footer="true"
                 :full-width="true"
                 @close="handleClose"
+                @cancel="handleClose"
                 @submit="handleSubmit"
             >
                 <slot name="title"></slot>

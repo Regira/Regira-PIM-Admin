@@ -35,7 +35,7 @@
                     </RouterLink>
                 </template>
                 <template v-else>
-                    <FormModalButton class="btn btn-info" @save="searchHandler(false)">
+                    <FormModalButton class="btn btn-info" @save="searchHandler(false)" @remove="searchHandler(false)">
                         <Icon name="new" /><span class="d-none d-sm-inline ms-1">{{ $t("new") }}</span>
                     </FormModalButton>
                 </template>

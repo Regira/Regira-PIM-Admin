@@ -2,7 +2,7 @@
     <div class="adv-filter">
         <div class="row">
             <div class="col mb-2" v-if="resultCount != null">
-                <span class="text-info">{{ resultCount }} results</span>
+                <span class="text-info">{{ resultCount }} {{ $t("results") }}</span>
                 <small v-if="filterIsActive" class="ms-2 italic-muted">({{ $t("filtersAreApplied") }})</small>
                 <span v-if="isLoading" class="ms-2 text-muted"><Loading style="height: 1.5rem" /></span>
             </div>
@@ -260,7 +260,7 @@
 <script setup lang="ts">
 import { ref, watch, watchEffect } from "vue"
 import { useFilter, type FilterEmits } from "regira_modules/vue/entities"
-import { config as unitTypeConfig, type Entity as UnitType, InputSelector as UnitTypeInputSelector } from "@/entities/unit-types"
+import { type Entity as UnitType, InputSelector as UnitTypeInputSelector } from "@/entities/unit-types"
 import { config as facetConfig, type Entity as Facet, InputSelector as FacetInputSelector, useEntityStore as useFacetStore } from "@/entities/facets"
 import { config as facetGroupConfig, type Entity as FacetGroup, InputSelector as FacetGroupInputSelector } from "@/entities/facet-groups"
 import SearchObject from "./SearchObject"
@@ -276,7 +276,7 @@ const emit = defineEmits<
     }
 >()
 
-const props = defineProps<{
+defineProps<{
     resultCount?: number
     isLoading?: boolean
 }>()
